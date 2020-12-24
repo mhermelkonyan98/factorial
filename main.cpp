@@ -1,10 +1,16 @@
 #include <iostream>
+#include <exception>
 #include "factorial.h"
 
+typedef unsigned long long ull ;
+
 int main() {
-  unsigned x;
-  std::cout << "Enter number(>0) "; 
-  std::cin >> x;
-  std::cout << "Factorial of your entered number is: " <<  factorial(x) << std::endl;
-  return 0;
+    try {
+        int n;
+        std::cin >> n;
+        std::cout << factorial(n) << std::endl;
+    }  catch (std::invalid_argument& ex) {
+        std::cerr << ex.what() << std::endl;
+    }
+    return 0;
 }

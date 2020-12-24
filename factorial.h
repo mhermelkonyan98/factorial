@@ -1,3 +1,4 @@
 #pragma once
 
-unsigned factorial(unsigned n);
+typedef unsigned long long ull;
+ull factorial(int a);
